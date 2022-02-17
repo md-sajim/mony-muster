@@ -1,0 +1,10 @@
+/* inputFils */
+label {
+  width: 100px;
+  display: inline-block;
+}
+/* button-style */
+.button {
+  height: 30px;
+  width: 130px;
+}

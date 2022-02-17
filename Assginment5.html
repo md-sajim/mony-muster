@@ -12,31 +12,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="/icon/favicon 2.ico" type="image/x-icon" />
-    <style>
-      label {
-        width: 100px;
-        display: inline-block;
-      }
-    </style>
+    <link rel="stylesheet" href="/Assginment5.css" />
   </head>
   <body>
     <header>
       <h1
-        class="bg-blue-300 mt-8 text-center p-5 text-4xl font-serif font-semibold text-yellow-200"
+        class="bg-black mt-8 text-center p-5 text-3xl font-serif font-semibold text-yellow-200"
       >
-        Money Management
+        MONEY MANAGEMENT
       </h1>
     </header>
     <section class="container">
       <div class="d-flex row">
-        <div class="col-12 mt-16 col-lg-6">
+        <div class="col-12 mt-24 col-lg-6">
           <img src="/image/Money Management.png" alt="" />
         </div>
         <div class="text-center bg-gray-100 p-5 mt-2 col-12 col-lg-6 rounded">
           <form>
             <h3>Income</h3>
             <label>Income:</label>
-            <input id="incomeFild" class="mt-2" type="text" /><br />
+            <input id="incomeFild" class="mt-2" type="text" required /><br />
             <h3>Expenses</h3>
             <label>Food:</label>
             <input id="foodFild" class="mt-2" type="text" /><br />
@@ -47,7 +42,7 @@
           </form>
           <button
             id="calculateButton"
-            class="mt-2 bg-green-400 text-white p-1 rounded"
+            class="mt-2 button bg-green-400 text-white p-1 rounded"
           >
             Calculate
           </button>
@@ -63,13 +58,16 @@
               type="text"
               placeholder=""
             />&ThinSpace; %&ThinSpace;<button
-              class="bg-green-400 text-white p-1 rounded"
+              id="saveButton"
+              class="bg-green-400 button text-white p-1 rounded mt-2"
             >
               Save
             </button>
           </h5>
-          <h4>Saving Amount: <span>00</span></h4>
-          <h4>Remaining Balance: <span>00</span></h4>
+          <h4 class="mt-2">Saving Amount: <span id="saveAmount">00</span></h4>
+          <h4 class="my-3">
+            Remaining Balance: <span id="remainingBalance">00</span>
+          </h4>
         </div>
       </div>
     </section>
