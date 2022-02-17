@@ -3,14 +3,12 @@ document
   .getElementById("calculateButton")
   .addEventListener("click", function incomeManesment() {
     const foodFild = document.getElementById("foodFild");
-    const foodValu = foodFild.value;
+    const foodValu = parseFloat(foodFild.value);
     const rentFild = document.getElementById("rentFild");
-    const rentValu = rentFild.value;
+    const rentValu = parseFloat(rentFild.value);
     const clothesFild = document.getElementById("clothesFild");
-    const clothesValu = clothesFild.value;
-    const totalCost =
-      parseFloat(foodValu) + parseFloat(rentValu) + parseFloat(clothesValu);
-    console.log(totalCost);
+    const clothesValu = parseFloat(clothesFild.value);
+    const totalCost = foodValu + rentValu + clothesValu;
     const totalExpenses = document.getElementById("totalExpenses");
     totalExpenses.innerText = totalCost;
     const incomeFild = document.getElementById("incomeFild");
