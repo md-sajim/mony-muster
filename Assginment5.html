@@ -36,14 +36,14 @@
           <form>
             <h3>Income</h3>
             <label>Income:</label>
-            <input class="mt-2" type="text" /><br />
+            <input id="incomeFild" class="mt-2" type="text" /><br />
             <h3>Expenses</h3>
             <label>Food:</label>
-            <input class="mt-2" type="text" /><br />
+            <input id="foodFild" class="mt-2" type="text" /><br />
             <label>Rent:</label>
-            <input class="mt-2" type="text" /><br />
+            <input id="rentFild" class="mt-2" type="text" /><br />
             <label>Clothes:</label>
-            <input class="mt-2" type="text" />
+            <input id="clothesFild" class="mt-2" type="text" />
           </form>
           <button
             id="calculateButton"
@@ -51,12 +51,20 @@
           >
             Calculate
           </button>
-          <h3 class="mt-2">Total Expenses: <span>00</span></h3>
-          <h3 class="mt-2">Balance: <span>00</span></h3>
+          <h3 class="mt-2">
+            Total Expenses: <span id="totalExpenses">00</span>
+          </h3>
+          <h3 class="mt-2">Balance: <span id="carantbalance">00</span></h3>
           <h5 class="mt-2">
             Save:
-            <input style="width: 50px" type="text" placeholder="" />&ThinSpace;
-            %&ThinSpace;<button class="bg-green-400 text-white p-1 rounded">
+            <input
+              id="saveParcant"
+              style="width: 50px"
+              type="text"
+              placeholder=""
+            />&ThinSpace; %&ThinSpace;<button
+              class="bg-green-400 text-white p-1 rounded"
+            >
               Save
             </button>
           </h5>
