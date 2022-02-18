@@ -1,11 +1,19 @@
 // calculateButton fild
+
 document
   .getElementById("calculateButton")
   .addEventListener("click", function incomeManesment() {
     const foodFild = document.getElementById("foodFild");
     const foodValu = parseFloat(foodFild.value);
+    if (isNaN(foodValu) || foodValu < 0) {
+      foodFild.value = "";
+      return alert("please give a valed number");
+    }
     const rentFild = document.getElementById("rentFild");
     const rentValu = parseFloat(rentFild.value);
+    if (isNaN(rentValu) || rentValu < 0) {
+      rentFild;
+    }
     const clothesFild = document.getElementById("clothesFild");
     const clothesValu = parseFloat(clothesFild.value);
     const totalCost = foodValu + rentValu + clothesValu;
@@ -28,7 +36,7 @@ document.getElementById("saveButton").addEventListener("click", function () {
   const carantSavein = parsentAmount * parsentValu;
   const carantSaveinValu = carantSavein;
   const saveAmount = document.getElementById("saveAmount");
-  saveAmount.innerText = carantSavein;
+  saveAmount.innerText = carantSaveinValu;
   const prevasBalance = document.getElementById("carantbalance");
   const prevasBalanceValue = parseFloat(prevasBalance.innerText);
   const netCrantBlance = prevasBalanceValue - carantSaveinValu;
